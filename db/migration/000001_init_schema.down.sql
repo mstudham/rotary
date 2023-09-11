@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS transactions;
+DROP TABLE IF EXISTS contacts;
+DROP TABLE IF EXISTS currencies;
+DROP TABLE IF EXISTS results;
+DROP TABLE IF EXISTS periods;
+DROP TABLE IF EXISTS accounts;
+
+DROP TYPE IF EXISTS currency;

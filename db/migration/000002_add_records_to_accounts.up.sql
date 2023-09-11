@@ -1,0 +1,10 @@
+-- INSERT INTO accounts (acc_code, acc_desc, acc_type, acc_pos, acc_source) 
+--               VALUES ('mds', 'Michael Studham', 'con', 99, false);
+-- INSERT INTO accounts (acc_code, acc_desc, acc_type, acc_pos, acc_source) 
+--               VALUES ('r', 'Raffle', 'inc', 22, false);
+-- INSERT INTO accounts (acc_code, acc_desc, acc_type, acc_pos, acc_source) 
+--               VALUES ('m', 'Meals', 'inc', 23, false);
+-- INSERT INTO accounts (acc_code, acc_desc, acc_type, acc_pos, acc_source) 
+--               VALUES ('rp', 'Robin Page', 'con', 98, false);
+-- INSERT INTO accounts (acc_code, acc_desc, acc_type, acc_pos, acc_source) 
+--               VALUES ('dm', 'David Mander', 'con', 97, false);
