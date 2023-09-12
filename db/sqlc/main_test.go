@@ -12,6 +12,7 @@ import (
 const (
 	dbDriver = "postgres"
 	dbSource = "postgresql://umds:pwms@localhost:5434/dbrotary?sslmode=disable"
+	//                        ^ AS USED IN MAKEFILE
 )
 
 var testQueries *Queries

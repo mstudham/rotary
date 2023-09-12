@@ -14,6 +14,28 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+
+    services:
+        postgres:
+          image: postgres:15.4-alpine
+          env:
+            # POSTGRES_USER: root
+            # POSTGRES_PASSWORD: secret
+            # POSTGRES_DB: simple_bank
+            # dbSource = "postgresql://umds:pwms@localhost:5434/dbrotary?sslmode=disable"
+            # ^ AS USED IN THE MAKEFILE - THEREFORE EXPECTED HERE?
+            POSTGRES_USER: umds
+            POSTGRES_PASSWORD: pwms
+            POSTGRES_DB: dbrotary
+          ports:
+            # - 5432:5432
+            - 5434:5432
+          options: >-
+            --health-cmd pg_isready
+            --health-interval 10s
+            --health-timeout 5s
+            --health-retries 5
+
     steps:
     - uses: actions/checkout@v3
     # copies this repository code to runner
@@ -23,6 +45,9 @@ jobs:
       with:
         go-version: '1.21'
     # installs go version 1.21 to runner  
+
+    - name: Make Migrations
+      run: make migrateup  
 
     - name: Build
       run: go build -v ./...
